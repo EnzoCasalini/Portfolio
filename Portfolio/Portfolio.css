@@ -20,7 +20,7 @@ body {
     position: fixed;
     width: 100%;
     height: 12vh;
-    background-color: #031231;
+    background-color: #051234;
     align-items: center;
     z-index: 1000;
 }
@@ -30,25 +30,19 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     height: 12vh;
     width: 100%;
 }
 
 .div_accueil {
-    display: block;
-    background-color: #031231;
+    display: flex;
+    background-color: #051234;
     height: 12vh;
-    width: 22vw;
+    width: 100px;
     margin-right: 12px;
-}
-
-.accueil {
-    padding-top: 3.8vh;
-    padding-left: 30%;
-    height: 12vh;
-    width: 100%;
-    float: left;
+    justify-content: center;
+    align-items: center;
 }
 
 .div_accueil:hover {
@@ -57,7 +51,7 @@ body {
 
 .nav-links {
     position: absolute;
-    background-color: #031231;
+    background-color: #051234;
     right: 0px;
     height: 88vh;
     top: 12vh;
@@ -83,7 +77,7 @@ body {
     padding-top: 10px;
     padding-bottom: 43px;
     text-align: center;
-    color: #fff;
+    color: #E5F9FF;
 }
 
 .navlink:hover {
@@ -107,7 +101,7 @@ body {
     0% {
         width: 0;
         height: 0;
-        border-top-color: #fff;
+        border-top-color: #E5F9FF;
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-left-color: transparent;
@@ -115,7 +109,7 @@ body {
     50% {
         width: 100%;
         height: 0;
-        border-top-color: #fff;
+        border-top-color: #E5F9FF;
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-left-color: transparent;
@@ -123,8 +117,8 @@ body {
     100% {
         width: 100%;
         height: 100%;
-        border-top-color: #fff;
-        border-right-color: #fff;
+        border-top-color: #E5F9FF;
+        border-right-color: #E5F9FF;
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
@@ -148,7 +142,7 @@ body {
         height: 0;
         border-top-color: transparent;
         border-right-color: transparent;
-        border-bottom-color: #fff;
+        border-bottom-color: #E5F9FF;
         border-left-color: transparent;
     }
     50% {
@@ -156,7 +150,7 @@ body {
         height: 0%;
         border-top-color: transparent;
         border-right-color: transparent;
-        border-bottom-color: #fff;
+        border-bottom-color: #E5F9FF;
         border-left-color: transparent;
     }
     100% {
@@ -164,8 +158,8 @@ body {
         height: 100%;
         border-top-color: transparent;
         border-right-color: transparent;
-        border-bottom-color: #fff;
-        border-left-color: #fff;
+        border-bottom-color: #E5F9FF;
+        border-left-color: #E5F9FF;
     }
 }
 
@@ -173,20 +167,23 @@ body {
     transform: translateX(0%);
 }
 
+.burger-menu {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     cursor: pointer;
     position: absolute;
     display: block;
-    top: 50%;
-    right: 30px;
-    padding-top: 2px;
-    transform: translateY(-50%);
 }
 
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 4px;
-    background-color: #fff;
+    background-color: #E5F9FF;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -207,7 +204,7 @@ body {
     width: 100%;
     height: 110vh;
     display: block;
-    background-image: url("./IMG/IMG_7065.JPG");
+    background-image: url("./IMG/IMG2.JPG");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -224,10 +221,17 @@ body {
     flex-direction: column;
 }
 
+#Home svg 
+{
+    position: absolute;
+    bottom: 150px;
+    left: 44%;
+}
+
 h1 {
     font-family: 'Libre Baskerville', serif;
     letter-spacing: 3px;
-    color: white;
+    color: #E5F9FF;
     font-size: 28px;
     line-height: normal;
     animation: Bug 1s linear infinite;
@@ -325,15 +329,15 @@ h1:after {
 
 #A_propos {
     width: 100%;
-    height: 240vh;
+    /* height: 240vh; */
     display: block;
-    background-color: #040b22;
+    background-color: #151E3F;
 }
 
 .infos {
     display: flex;
     width: 100%;
-    height: 240vh;
+    /* height: 240vh; */
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 20vh;
@@ -345,21 +349,21 @@ h1:after {
 .presentation {
     font-family: 'Baloo Tammudu 2', cursive;
     font-size: 19.5px;
-    color: white;
-    height: 40vh;
-    line-height: 30px;
+    color: #E5F9FF;
+    /* height: 60vh; */
+    line-height: 35px;
 }
 
 .presentation p {
-    margin-top: 15px;
+    margin-top: 22px;
 }
 
 .C_V {
     position: absolute;
     font-family: 'Baloo Tammudu 2', cursive;
-    font-size: 15px;
-    color: white;
-    border: 1px solid white;
+    font-size: 17px;
+    color: #E5F9FF;
+    border: 1px solid #E5F9FF;
     padding-top: 8px;
     padding-right: 10px;
     padding-left: 10px;
@@ -372,139 +376,66 @@ h1:after {
 .competences {
     position: relative;
     display: flex;
-    padding-top: 60px;
-    height: 160vh;
+    margin-top: 50px;
+    /* height: 160vh; */
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.competences .percent {
-    position: relative;
-    width: 170px;
-    height: 170px;
-}
-
-.competences .percent svg {
-    position: relative;
-    width: 170px;
-    height: 170px;
-}
-
-.competences .percent svg circle {
-    width: 170px;
-    height: 170px;
-    fill: none;
-    stroke-width: 10;
-    transform: translate(5px, 5px);
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-}
-
-.competences .percent svg circle:nth-child(1) {
-    stroke-dashoffset: 0;
-    stroke: #081131;
-}
-
-.competences .percent svg .reveal {
-    opacity: 0;
-}
-
-.competences .percent .reveal-visible .html_css:nth-child(2) {
-    transform: rotate(-80deg);
-    transform-origin: 50.4% 46.8%;
-    animation: chargement 1s forwards;
-    stroke: rgb(14, 70, 190);
-}
-
-.competences .percent .reveal-visible .JS:nth-child(2) {
-    transform: rotate(-80deg);
-    transform-origin: 50.4% 46.8%;
-    animation: chargement2 1s forwards;
-    stroke: rgb(14, 70, 190);
-}
-
-.competences .percent .reveal-visible .lan_C:nth-child(2) {
-    transform: rotate(-80deg);
-    transform-origin: 50.4% 46.8%;
-    animation: chargement3 1s forwards;
-    stroke: rgb(14, 70, 190);
-}
-
-.competences .percent .reveal-visible .php:nth-child(2) {
-    transform: rotate(-80deg);
-    transform-origin: 50.4% 46.8%;
-    animation: chargement4 1s forwards;
-    stroke: rgb(14, 70, 190);
-}
-
-.competences .percent .number {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.competences .percent .number h2 {
-    font-size: 48px;
-}
-
-.competences .percent .number h2 span {
+.infos h3 
+{
+    font-family: Baloo Tammudu 2;
+    font-style: normal;
+    font-weight: 600;
     font-size: 24px;
-}
-
-.competences .langage {
-    padding: 10px 0 0;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+    line-height: 75px;
     text-align: center;
-    font-weight: 500;
-    letter-spacing: 1px;
+    text-decoration-line: underline;
+    color: #E5F9FF;
 }
 
-@keyframes chargement {
-    to {
-        stroke-dashoffset: 100.4;
-    }
+.competences .skills
+{
+    display: flex;
+    width: 260px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-@keyframes chargement2 {
-    to {
-        stroke-dashoffset: 351.4;
-    }
+.infos li
+{
+    font-family: Baloo Tammudu 2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 67px;
+    color: #E5F9FF;
 }
 
-@keyframes chargement3 {
-    to {
-        stroke-dashoffset: 50.2;
-    }
+.outils 
+{
+    margin: 50px 0;
 }
 
-@keyframes chargement4 {
-    to {
-        stroke-dashoffset: 150.6;
-    }
+.outils ul 
+{
+    text-align: center;
 }
+
 
 #Mes_projets {
     width: 100%;
-    height: 230vh;
+    /* height: 230vh; */
     display: block;
-    background-color: #040b22;
+    background-color: #151E3F;
 }
 
 .projects {
     display: flex;
     width: 100%;
-    height: 230vh;
+    /* height: 230vh; */
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 20vh;
@@ -516,7 +447,7 @@ h1:after {
 .projects span {
     font-family: 'Baloo Tammudu 2', cursive;
     font-size: 19.5px;
-    color: white;
+    color: #E5F9FF;
     text-align: center;
 }
 
@@ -524,7 +455,7 @@ h1:after {
     position: relative;
     display: flex;
     width: 100%;
-    height: 170vh;
+    /* height: 170vh; */
     padding-top: 15vh;
     flex-direction: column;
     justify-content: space-between;
@@ -536,7 +467,8 @@ h1:after {
     position: relative;
     width: 200px;
     height: 250px;
-    background: linear-gradient(0deg, #000, #272727);
+    margin-bottom: 70px;
+    background: linear-gradient(0deg, #141415, #272727);
 }
 
 .projects .all_projects .box:before, .box:after {
@@ -544,7 +476,7 @@ h1:after {
     position: absolute;
     left: -2px;
     top: -2px;
-    background: linear-gradient(45deg, #00f7ff, #0000ff, #1f60d8, #120586, #ffffff, #00f7ff, #0000ff, #1f60d8, #120586, #ffffff);
+    background: linear-gradient(45deg, #00f7ff, #0000ff, #1f60d8, #120586, #E5F9FF, #00f7ff, #0000ff, #1f60d8, #120586, #E5F9FF);
     background-size: 400%;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
@@ -573,7 +505,7 @@ h1:after {
     text-align: center;
     font-family: 'Baloo Tammudu 2', cursive;
     text-decoration: underline;
-    color: white;
+    color: #E5F9FF;
     line-height: 30px;
 }
 
@@ -581,7 +513,7 @@ h1:after {
     padding-top: 1vh;
     font-family: 'Baloo Tammudu 2', cursive;
     font-size: 15px;
-    color: white;
+    color: #E5F9FF;
     line-height: 25px;
     padding-left: 15px;
     padding-right: 15px;
@@ -590,15 +522,19 @@ h1:after {
 }
 
 .projects .all_projects .box .snd_p {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+.box:last-child p {
+    margin-bottom: 40px !important;
 }
 
 .projects .all_projects .box a {
     font-family: 'Baloo Tammudu 2', cursive;
     font-size: 15px;
-    color: white;
+    color: #E5F9FF;
     line-height: 25px;
-    border: 1px solid white;
+    border: 1px solid #E5F9FF;
     padding-top: 8px;
     padding-left: 15px;
     padding-right: 15px;
@@ -606,7 +542,7 @@ h1:after {
 }
 
 .projects .all_projects .box a:hover {
-    background: linear-gradient(70deg, #041c3b, rgb(9, 44, 119));
+    background: linear-gradient(70deg, #0f4996, rgb(20, 141, 189));
 }
 
 .projects .all_projects .box .reveal {
@@ -620,15 +556,15 @@ h1:after {
 
 #Contact {
     width: 100%;
-    height: 180vh;
+    /* height: 180vh; */
     display: block;
-    background: linear-gradient(to bottom, #000a18, rgb(2, 18, 51));
+    background: #151E3F;
 }
 
 .contact_box {
     display: flex;
     width: 100%;
-    height: 180vh;
+    /* height: 180vh; */
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 15vh;
@@ -637,14 +573,14 @@ h1:after {
     justify-content: space-between;
     font-family: 'Baloo Tammudu 2', cursive;
     font-size: 19.5px;
-    color: white;
+    color: #E5F9FF;
 }
 
 .wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 80vh;
+    height: 55vh;
     width: 100%;
 }
 
@@ -659,9 +595,9 @@ h1:after {
     width: 100%;
     border: none;
     font-size: 15px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #E5F9FF;
     background: transparent;
-    color: white;
+    color: #E5F9FF;
 }
 
 .wrapper .msg {
@@ -682,7 +618,7 @@ textarea {
 
 .wrapper .input-data label {
     position: absolute;
-    color: #fff;
+    color: #E5F9FF;
     left: 0;
     font-size: 17px;
     pointer-events: none;
@@ -729,13 +665,14 @@ textarea:focus-visible {
     margin-left: auto;
     font-size: 14px;
     font-weight: 700;
-    color: #fff;
+    color: #E5F9FF;
     text-transform: uppercase;
     letter-spacing: 1.44px;
     box-shadow: 0px 16px 35px 0 rgba(0, 0, 0, 0.25);
-    background: linear-gradient(to right bottom, #041c3b, rgb(9, 44, 119));
+    background: linear-gradient(to right bottom, #151E3F, #151E3F);
     outline: none;
-    border: none;
+    border: solid 2px #E5F9FF;
+    border-radius: 0.5rem;
     overflow: hidden;
     cursor: pointer;
 }
@@ -870,8 +807,8 @@ textarea:focus-visible {
 {
     display: block;
     width: 100%;
-    height: 80vh;
-    padding-top: 40px;
+    /* height: 80vh; */
+    margin-top: 70px;
 }
 
 .contact_method
@@ -881,8 +818,9 @@ textarea:focus-visible {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
-    height: 55vh;
+    height: 50vh;
     padding-top: 50px;
+    margin-bottom: 50px;
 }
 
 .contact_method a
@@ -893,32 +831,17 @@ textarea:focus-visible {
     height: 45px;
 }
 
-.contact_method img
-{
-    width: 43px;
-    height: 34px;
-    padding-left: 4px;
-    margin-right: 30px;
+.contact_method span {
+    margin-left: 20px;
 }
-
-.contact_method a:nth-child(3) img
-{
-    width: 50px;
-    height: 50px;
-    padding-left: 0;
-    margin-right: 23px;
-}
-
-.contact_method a:nth-child(3)
-{
-    line-height: 63px;
-}
-
 
 a:-webkit-any-link {
-    color: white;
+    color: #E5F9FF;
 }
 
+
+
+/* RESPONSIVE */
 
 @media screen and (min-width: 768px) {
     .div_accueil {
