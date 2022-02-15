@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Portfolio.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;800&family=Libre+Baskerville&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <title>Tel</title>
+</head>
+
+<body>
+
+  <header id="navbar">
+    <nav class="topbar" id="myTopbar">
+      <div class="div_accueil">
+        <a href="#Home" class="accueil"><img src="./IMG/home-3-32.png"></a>
+      </div>
+      <div class="nav-links">
+        <a href="#A_propos" class="navlink">À propos</a>
+        <a href="#Mes_projets" class="navlink">Mes projets</a>
+        <a href="#Contact" class="navlink">Contact</a>
+      </div>
+      <div class="container" onclick="OpenMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+
+  </header>
+
+  <section id="Home">
+    <div class="page_de_garde">
+      <h1 class="port lightSpeedIn" title="Portfolio">Portfolio</h1>
+      <br>
+      <h1 class="nom lightSpeedIn" title="Enzo Casalini">Enzo Casalini</h1>
+    </div>
+  </section>
+
+  <section id="A_propos">
+    <div class="infos">
+      <div class="presentation">
+        <span>Bonjour ! Je suis Enzo Casalini, jeune développeur étudiant en première année à Sophia Ynov Campus.</span>
+        <br>
+        <span>Vous pouvez télécharger mon CV : </span>
+        <br><a href="./IMG/CV Enzo Casalini.pdf" target="_blank" class="C_V">Télécharger</a>
+        <br>
+        <p>Ou voir un aperçu de mes compétences :</p>
+      </div>
+      <div class="competences">
+        <div class="percent">
+          <svg class="reveal">
+            <circle r="80" cx="80" cy="80"></circle>
+            <circle class="html_css" r="80" cx="80" cy="80"></circle>
+          </svg>
+          <div class="number">
+            <h2>80<span>%</span></h2>
+          </div>
+          <h2 class="langage">HTML5/CSS3</h2>
+        </div>
+        <div class="percent">
+          <svg class="reveal">
+            <circle r="80" cx="80" cy="80"></circle>
+            <circle class="JS" r="80" cx="80" cy="80"></circle>
+          </svg>
+          <div class="number">
+            <h2>30<span>%</span></h2>
+          </div>
+          <h2 class="langage">JavaScript</h2>
+        </div>
+        <div class="percent">
+          <svg class="reveal">
+            <circle r="80" cx="80" cy="80"></circle>
+            <circle class="lan_C" r="80" cx="80" cy="80"></circle>
+          </svg>
+          <div class="number">
+            <h2>90<span>%</span></h2>
+          </div>
+          <h2 class="langage">C/SDL2</h2>
+        </div>
+        <div class="percent">
+          <svg class="reveal">
+            <circle r="80" cx="80" cy="80"></circle>
+            <circle class="php" r="80" cx="80" cy="80"></circle>
+          </svg>
+          <div class="number">
+            <h2>70<span>%</span></h2>
+          </div>
+          <h2 class="langage">PHP/SQL</h2>
+        </div>
+      </div>
+  </section>
+
+  <section id="Mes_projets">
+    <div class="projects">
+      <span>Voici quelques uns de mes projets :</span>
+      <div class="all_projects">
+        <div class="box">
+          <h3 class="reveal">Himitsu No Meiro</h3>
+          <p class="reveal">Un jeu que j'ai réalisé en langage C à l'aide de la bibliothèque SDL2. Il est fonctionnel mais peut être amélioré.</p>
+          <a href="https://github.com/EnzoCasalini/HimitsuNoMeiro" class="reveal" target="_blank">Plus d'infos</a>
+        </div>
+        <div class="box">
+          <h3 class="reveal">Blog Personnel</h3>
+          <p class="reveal">Site avec un système d'authentification et de gestion de profil qui sera, plus tard, le site du BDE de notre école.</p>
+          <a href="https://github.com/EnzoCasalini/Site_BDE" class="reveal" target="_blank">Plus d'infos</a>
+        </div>
+        <div class="box">
+          <h3 class="reveal">Portfolio</h3>
+          <p class="snd_p reveal">Ce Portfolio constitue un projet pour la fin de ma première année. Il a été totalement
+            réalisé en HTML5, CSS3 et JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="Contact">
+    <div class="contact_box">
+      <div class="wrapper">
+        <span>Vous pouvez m'envoyer un mail  </span>
+        <div class="input-data">
+          <input type="text" required>
+          <div class="underline"></div>
+          <label>Nom</label>
+        </div>
+
+        <div class="input-data">
+          <input type="text" required>
+          <div class="underline"></div>
+          <label>Email</label>
+        </div>
+
+        <div class="input-data msg">
+          <textarea type="text" name="message" required></textarea>
+          <div class="underline"></div>
+          <label>Message</label>
+        </div>
+        <button class="submit-button" type="submit" title="Submit">
+          <span class="en_cours"></span>
+          <span class="text_submit">Envoyer</span>
+          <span class="finito"> <span>Envoyé !</span>
+        </button>
+    </div>
+
+    <div class="reseaux">
+      <span>Ou me contacter </span>
+      <div class="contact_method">
+        <a href="tel:+33627625795"><img src="./IMG/téléphone.png">06 27 62 57 95</a>
+        <a href="mailto:enzocasa83@gmail.com"><img src="./IMG/mailsheesh.png">enzocasa83@gmail.com</a>
+        <a href="https://github.com/EnzoCasalini" target="_blank"><img src="./IMG/github (1).png">EnzoCasalini</a>
+      </div>
+    </div>
+
+
+    </div>
+  </footer>
+
+
+
+  <script src="./Portfolio.js"></script>
+
+</body>
+
+</html>
