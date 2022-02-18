@@ -900,9 +900,6 @@ a:-webkit-any-link {
         font-size: 4em;
         line-height: 100px;
     }
-    #A_propos {
-        /* height: 160vh; */
-    }
     .infos {
         /* height: 160vh; */
         padding-left: 15%;
@@ -939,9 +936,6 @@ a:-webkit-any-link {
     }
     .outils {
         margin: 80px 0;
-    }
-    #Mes_projets {
-        /* height: 140vh; */
     }
     .projects {
         padding-left: 10%;
