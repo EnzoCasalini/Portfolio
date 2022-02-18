@@ -225,8 +225,29 @@ body {
 {
     position: absolute;
     bottom: 150px;
-    left: 44%;
+    left: 45vw;
+    animation: spring 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 }
+
+@keyframes spring { 
+    0% {
+      transform: scale(1) translateY(0); 
+    }
+    10% {
+      transform: scale(1.2, 0.6); 
+    }
+    30% { 
+      transform: scale(0.8, 1.1) translateY(-10px); 
+    }
+    50% { 
+      transform: scale(1) translateY(0); 
+    }
+    100% { 
+      transform: translateY(0); 
+    }
+  }
 
 h1 {
     font-family: 'Libre Baskerville', serif;
@@ -346,6 +367,37 @@ h1:after {
     justify-content: flex-start;
 }
 
+.infos h3 
+{
+    font-family: Baloo Tammudu 2;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 75px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #E5F9FF;
+}
+
+.infos li
+{
+    font-family: Baloo Tammudu 2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 67px;
+    color: #E5F9FF;
+}
+
+.infos .reveal {
+    opacity: 0;
+}
+
+.infos .reveal-visible {
+    opacity: 1;
+    transition: 1.5s cubic-bezier(0.5, 0, 0, 1);
+}
+
 .presentation {
     font-family: 'Baloo Tammudu 2', cursive;
     font-size: 19.5px;
@@ -384,34 +436,12 @@ h1:after {
     align-items: center;
 }
 
-.infos h3 
-{
-    font-family: Baloo Tammudu 2;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 75px;
-    text-align: center;
-    text-decoration-line: underline;
-    color: #E5F9FF;
-}
-
 .competences .skills
 {
     display: flex;
     width: 260px;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.infos li
-{
-    font-family: Baloo Tammudu 2;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 67px;
-    color: #E5F9FF;
 }
 
 .outils 
@@ -844,83 +874,150 @@ a:-webkit-any-link {
 /* RESPONSIVE */
 
 @media screen and (min-width: 768px) {
+    #navbar svg {
+        width: 60px;
+        height: 60px;
+    }
     .div_accueil {
-        width: 12vw;
+        width: 18vw;
     }
-    .accueil {
-        border-right: 2px solid white;
-        padding-top: 3.3vh;
+    .burger-menu {
+        width: 18vw;
     }
-    .container {
-        display: none;
-    }
-    .nav-links {
-        position: relative;
-        right: auto;
-        height: auto;
-        top: auto;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        transform: none;
-    }
-    .nav-active {
-        transform: none;
+    .bar1, .bar2, .bar3 {
+        width: 45px;
+        height: 5px;
     }
     .navlink {
-        font-size: 18px;
-        text-transform: none;
-        width: 150px;
-        padding-top: 4px;
-        padding-bottom: 0;
+        font-size: 2.2em;
+    }
+    #Home svg {
+        width: 60px;
+        height: 60px;
+        left: 46vw;
     }
     h1 {
-        font-size: 50px;
+        font-size: 4em;
         line-height: 100px;
     }
     #A_propos {
-        height: 160vh;
+        /* height: 160vh; */
     }
     .infos {
-        height: 160vh;
+        /* height: 160vh; */
+        padding-left: 15%;
+        padding-right: 15%;
     }
     .presentation {
-        font-size: 20px;
-        height: 30vh;
+        font-size: 1.9em;
+        letter-spacing: 0.02em;
+        line-height: 1.2em;
+        /* height: 30vh; */
     }
     .presentation a {
-        font-size: 17px;
-        padding-top: 9px;
+        font-size: 0.75em;
+        margin-top: 6px;
+        line-height: 40px;
     }
     .presentation p {
-        margin-top: 20px;
+        margin-top: 40px;
     }
     .competences {
-        flex-direction: row;
-        width: 80%;
-        height: 90vh;
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 100px;
+    }
+    .competences .skills {
+        width: 400px;
+    }
+    .infos h3 {
+        font-size: 2.3em;
+        letter-spacing: 0.02em;
+        margin-bottom: 20px;
+    }
+    .infos li {
+        font-size: 1.9em;
+        line-height: 75px;
+    }
+    .outils {
+        margin: 80px 0;
     }
     #Mes_projets {
-        height: 140vh;
+        /* height: 140vh; */
     }
     .projects {
-        padding-left: 3vw;
-        padding-right: 3vw;
-        height: 140vh;
+        padding-left: 10%;
+        padding-right: 10%;
+        /* height: 140vh; */
     }
     .projects span {
-        font-size: 25px;
-        letter-spacing: 1px;
+        font-size: 1.9em;
+        letter-spacing: 0.02em;
     }
     .all_projects {
         flex-direction: row;
-        height: 60vh;
+        /* height: 60vh; */
         flex-wrap: wrap;
-        padding-top: 10vh;
+        justify-content: space-evenly;
+        /* padding-top: 10vh; */
+    }
+    .box{
+        width: 250px;
+        height: 300px;
+        margin-bottom: 110px;
+    }
+    .box h3 {
+        font-size: 1.5em;
+    }
+    .projects .all_projects .box p {
+        font-size: 1.2em;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    .projects .all_projects .box a {
+        margin-left: 30%;
+    }
+    .projects .all_projects .box .snd_p {
+        margin-bottom: 30px;
+    }
+    .contact_box {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+     .wrapper {
+        height: 50vh;
+    }
+    .wrapper span {
+        font-size: 1.7em;
+        letter-spacing: 0.02em;
+    }
+    .wrapper .input-data label
+    {
+        font-size: 1.2em;
+    }
+    .input-data input:focus~label, .input-data textarea:focus~label, .input-data textarea:valid~label, .input-data input:valid~label {
+        font-size: 1.2em;
+    }
+    .wrapper .input-data input, textarea {
+        font-size: 1.3em;
+    } 
+    .input-data input:focus~label, .input-data textarea:focus~label, .input-data textarea:valid~label, .input-data input:valid~label {
+        transform: translateY(-40px);
+    }
+    .submit-button {
+        font-size: 1.1em;
+        letter-spacing: 3px;
+    }
+    .reseaux {
+        margin-top: 100px;
+    }
+    .reseaux span {
+        font-size: 1.7em;
+    }
+    .reseaux svg {
+        width: 60px;
+        height: 60px;
+    }
+    .contact_method span {
+        margin-left: 40px;
     }
 }
 
