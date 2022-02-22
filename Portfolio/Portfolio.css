@@ -16,45 +16,46 @@ body {
     overflow-x: hidden;
 }
 
-#navbar {
-    position: fixed;
-    width: 100%;
-    height: 12vh;
-    background-color: #051234;
-    align-items: center;
-    z-index: 1000;
+.scroll-down header .topbar {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header .topbar {
+    filter: drop-shadow(0 -20px 20px rgb(170, 170, 170));
 }
 
 .topbar {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    height: 12vh;
     width: 100%;
+    padding: 10px 0;
+    background-color: #051234;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    transition: all 300ms ease-in-out;
 }
 
 .div_accueil {
     display: flex;
     background-color: #051234;
-    height: 12vh;
     width: 100px;
-    margin-right: 12px;
     justify-content: center;
     align-items: center;
 }
 
-.div_accueil:hover {
+/* .div_accueil:hover {
     background: linear-gradient(70deg, #0f4996, rgb(20, 141, 189));
-}
+} */
 
 .nav-links {
     position: absolute;
     background-color: #051234;
     right: 0px;
-    height: 88vh;
-    top: 12vh;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -202,7 +203,7 @@ body {
 
 #Home {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     display: block;
     background-image: url("./IMG/IMG2.JPG");
     background-repeat: no-repeat;
@@ -212,10 +213,10 @@ body {
 .page_de_garde {
     overflow: hidden;
     position: absolute;
-    width: 80vw;
+    width: 100%;
     height: 300px;
-    top: 25%;
-    left: 10%;
+    top: auto;
+    bottom: 40vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -224,7 +225,7 @@ body {
 #Home svg 
 {
     position: absolute;
-    bottom: 150px;
+    bottom: 5vh;
     left: 45vw;
     animation: spring 2s;
     animation-timing-function: ease;
@@ -355,6 +356,16 @@ h1:after {
     background-color: #151E3F;
 }
 
+.left_contacts, .right_contacts {
+    opacity: 0;
+    height: 0;
+}
+
+.invisible {
+    opacity: 0;
+    height: 0;
+}
+
 .infos {
     display: flex;
     width: 100%;
@@ -369,7 +380,7 @@ h1:after {
 
 .infos h3 
 {
-    font-family: Baloo Tammudu 2;
+    font-family: 'Baloo Tammudu 2', cursive;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -381,7 +392,7 @@ h1:after {
 
 .infos li
 {
-    font-family: Baloo Tammudu 2;
+    font-family: 'Baloo Tammudu 2', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -555,8 +566,8 @@ h1:after {
     margin-bottom: 10px;
 }
 
-.box:last-child p {
-    margin-bottom: 40px !important;
+.projects .all_projects .box:last-child p {
+    margin-bottom: 40px;
 }
 
 .projects .all_projects .box a {
@@ -643,7 +654,7 @@ textarea {
     transform: translateY(-20px);
     transition: transform 0.4s ease;
     font-size: 14px;
-    color: rgb(20, 141, 189);
+    color: #4bbef0;
 }
 
 .wrapper .input-data label {
@@ -848,7 +859,7 @@ textarea:focus-visible {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
-    height: 50vh;
+    height: 300px;
     padding-top: 50px;
     margin-bottom: 50px;
 }
@@ -877,6 +888,9 @@ a:-webkit-any-link {
     #navbar svg {
         width: 60px;
         height: 60px;
+    }
+    .topbar {
+        padding: 25px 10px;
     }
     .div_accueil {
         width: 18vw;
@@ -1010,22 +1024,61 @@ a:-webkit-any-link {
         width: 60px;
         height: 60px;
     }
+    .contact_method {
+        height: 420px;
+    }
     .contact_method span {
         margin-left: 40px;
     }
 }
 
 @media screen and (min-width: 992px) {
+    #navbar svg {
+        width: 45px;
+        height: 45px;
+    }
+    #navbar .div_accueil a:hover svg path {
+        fill: #4bbef0;
+    }
     .div_accueil {
-        width: 8.5vw;
+        width: 10vw;
+        border-right: 2px solid #E5F9FF;
+    }
+    #Home a:hover svg path {
+        fill: #4bbef0;
+    }
+    .container {
+        display: none;
+    }
+    .nav-links {
+        position: relative;
+        right: auto;
+        height: auto;
+        top: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        transform: none;
+        padding-left: 20px;
+    }
+    .nav-active {
+        transform: none;
+    }
+    .navlink {
+        font-size: 18px;
+        text-transform: none;
+        width: 150px;
+        padding-top: 4px;
+        padding-bottom: 0;
     }
     h1 {
-        line-height: 70px;
+        line-height: 85px;
     }
     .page_de_garde {
-        left: 55%;
-        top: 43%;
-        width: 40vw;
+        bottom: 20vh;
+        padding-left: 45%;
     }
     .port {
         text-align: unset;
@@ -1033,169 +1086,165 @@ a:-webkit-any-link {
     .nom {
         text-align: unset;
     }
+    #Home svg {
+        width: 50px;
+        height: 50px;
+        left: 48vw;
+    }
+    .left_contacts {
+        display: block;
+        position: fixed;
+        width: 50px;
+        bottom: 0px;
+        left: 40px;
+        right: auto;
+        z-index: 1000;
+        opacity: 1;
+        transition: 1.5s cubic-bezier(0.5, 0, 0, 1);
+        height: unset;
+    }
+    .left_contacts ul, .side_mail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left_contacts ul::after, .side_mail::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 100px;
+        margin: 0px auto;
+        background-color: #E5F9FF;
+    }
+    .left_contacts ul li a {
+        padding: 10px;
+        display: inline-block;
+    }
+    .left_contacts ul li a svg {
+        width: 25px;
+        height: 25px;
+    }
+    .left_contacts ul li a:hover svg path {
+        fill: #4bbef0;
+    }
+    .right_contacts {
+        display: block;
+        position: fixed;
+        width: 50px;
+        bottom: 0px;
+        right: 40px;
+        left: auto;
+        z-index: 1000;
+        opacity: 1;
+        transition: 1.5s cubic-bezier(0.5, 0, 0, 1);
+        height: unset;
+    }
+    .right_contacts .side_mail a {
+        writing-mode: vertical-rl;
+        margin: 10px auto;
+        color: #E5F9FF;
+    }
+    .right_contacts .side_mail a:hover {
+        color: #4bbef0;
+    }
+    .infos {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .infos li {
+        font-size: 1.6em;
+    }
     .presentation {
-        height: 30vh;
-    }
-    .competences {
-        flex-direction: row;
-        width: 60%;
-        height: 100vh;
-        padding-top: 0;
-    }
-    #Mes_projets {
-        height: 140vh;
+        font-size: 1.6em;
+        line-height: 1.5em;
     }
     .projects {
         padding-right: 10%;
         padding-left: 10%;
-        height: 140vh;
-    }
-    .box:nth-child(3) {
-        margin: 0;
-    }
-    .all_projects {
-        height: 80vh;
-    }
-    #Contact
-    {
-        background: linear-gradient(to right, #000a18, rgb(2, 18, 51));
-        height: 110vh;
-    }
-    .contact_box
-    {
-        flex-direction: row;
-        height: 110vh;
-    }
-    .contact_box span
-    {
-        font-size: 25px;
-    }
-    .wrapper
-    {
-        margin-right: 150px;
-    }
-    .reseaux
-    {
-        padding-top: 0;
-    }
-    .submit-button span
-    {
-        font-size: 15px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .div_accueil {
-        width: 6.5vw;
-    }
-    .accueil {
-        padding-top: 3.8vh;
-    }
-    .navlink {
-        font-size: 20px;
-        padding-top: 3px;
-    }
-    h1 {
-        font-size: 65px;
-        line-height: 100px;
-    }
-    .page_de_garde {
-        left: 48.3%;
-        top: 45%;
-        width: 40vw;
-    }
-    #A_propos {
-        height: 120vh;
-    }
-    .infos {
-        height: 120vh;
-    }
-    .presentation {
-        font-size: 26px;
-        line-height: 40px;
-    }
-    .presentation a {
-        font-size: 20px;
-        padding-top: 11px;
-    }
-    .presentation p {
-        margin-top: 28px;
-    }
-    .competences {
-        width: 100%;
-        height: 50vh;
     }
     .projects span {
-        font-size: 30px;
-    }
-    .all_projects {
-        padding: 0;
-        height: 80vh;
+        font-size: 1.6em;
     }
     .box {
-        width: 300px;
-        height: 350px;
+        margin-bottom: 70px;
     }
-    .projects .all_projects .box h3 {
-        font-size: 25px;
-        padding-top: 5vh;
-    }
-    .projects .all_projects .box p {
-        padding-top: 3vh;
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 30px;
-    }
-    .projects .all_projects .box:nth-child(2) p {
+    .projects .all_projects .box:last-child p {
         margin-bottom: 60px;
     }
-
-    .projects .all_projects .box a {
-        padding-top: 9px;
-        font-size: 20px;
-        margin-left: 28%;
+    .contact_box {
+        padding: 15vh 25%;
     }
-    .contact_box span
-    {
-        font-size: 30px;
+    .wrapper {
+        height: 60vh;
     }
-    .wrapper
-    {
-        margin-right: 250px;
+    .submit-button:hover {
+        /* border: 2px solid rgb(88, 222, 255);
+        color: rgb(88, 222, 255); */
+        background: linear-gradient(to right bottom, #0f4996, rgb(20, 141, 189));
     }
-    .submit-button
-    {
-        width: 250px;
-        height: 60px;
-    }
-    .submit-button span
-    {
-        font-size: 20px;
-    }
-    .wrapper .input-data label
-    {
-        font-size: 20px;
-    }
-    .input-data input:focus~label, .input-data textarea:focus~label, .input-data textarea:valid~label, .input-data input:valid~label {
-        font-size: 17px;
-    }
-    .contact_method a 
-    {
-        font-size: 24px;
-    }
-    .contact_method img 
-    {
-        width: 50px;
-        height: 40px;
-    }
-    .contact_method a:nth-child(3) img
-    {
-        width: 60px;
-        height: 60px;
-    }
-    .contact_method a:nth-child(3)
-    {
-        line-height: 70px;
+    .reseaux {
+        display: none;
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .div_accueil {
+        width: 8vw;
+        padding-right: 10px;
+    }
+    .nav-links {
+        padding-left: 10px;
+    }
+    .left_contacts {
+        left: 85px;
+    }
+    .right_contacts {
+        right: 85px;
+    }
+    .comp_outils {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .competences, .outils {
+        margin: 100px 0;
+    }
+    .projects {
+        padding: 15vh 20%;
+    }
+    .contact_box {
+        padding: 15vh 30%;
+    }
+    .wrapper {
+        height: 65vh;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    h1 {
+        font-size: 5em;
+    }
+    #navbar svg {
+        width: 55px;
+        height: 55px;
+    }
+    .navlink {
+        font-size: 1.3em;
+    }
+    .infos {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+    .left_contacts {
+        left: 100px;
+    }
+    .right_contacts {
+        right: 100px;
+    }
+    .projects {
+        padding: 15vh 25%;
+    }
+    .contact_box {
+        padding: 15vh 33%;
+    }
+}
