@@ -1,14 +1,11 @@
 window.onscroll = function() {ScrollApparition()};
 function ScrollApparition() {
-  $left = document.getElementById("scrollElementLeft");
-  $right = document.getElementById("scrollElementRight");
+  $Apropos = document.getElementById("A_propos");
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) 
   {
-    $left.className = "left_contacts";
-    $right.className = "right_contacts";
+    $Apropos.className = "apparition";
   } 
   else {
-    $left.className = "invisible";
-    $right.className ="invisible";
+    $Apropos.className ="invisible";
   }
 }

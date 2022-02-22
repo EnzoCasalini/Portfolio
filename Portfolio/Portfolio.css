@@ -47,10 +47,6 @@ body {
     align-items: center;
 }
 
-/* .div_accueil:hover {
-    background: linear-gradient(70deg, #0f4996, rgb(20, 141, 189));
-} */
-
 .nav-links {
     position: absolute;
     background-color: #051234;
@@ -351,7 +347,6 @@ h1:after {
 
 #A_propos {
     width: 100%;
-    /* height: 240vh; */
     display: block;
     background-color: #151E3F;
 }
@@ -361,15 +356,10 @@ h1:after {
     height: 0;
 }
 
-.invisible {
-    opacity: 0;
-    height: 0;
-}
 
 .infos {
     display: flex;
     width: 100%;
-    /* height: 240vh; */
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 20vh;
@@ -413,7 +403,6 @@ h1:after {
     font-family: 'Baloo Tammudu 2', cursive;
     font-size: 19.5px;
     color: #E5F9FF;
-    /* height: 60vh; */
     line-height: 35px;
 }
 
@@ -440,7 +429,6 @@ h1:after {
     position: relative;
     display: flex;
     margin-top: 50px;
-    /* height: 160vh; */
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -468,7 +456,6 @@ h1:after {
 
 #Mes_projets {
     width: 100%;
-    /* height: 230vh; */
     display: block;
     background-color: #151E3F;
 }
@@ -476,7 +463,6 @@ h1:after {
 .projects {
     display: flex;
     width: 100%;
-    /* height: 230vh; */
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 20vh;
@@ -496,7 +482,6 @@ h1:after {
     position: relative;
     display: flex;
     width: 100%;
-    /* height: 170vh; */
     padding-top: 15vh;
     flex-direction: column;
     justify-content: space-between;
@@ -597,7 +582,6 @@ h1:after {
 
 #Contact {
     width: 100%;
-    /* height: 180vh; */
     display: block;
     background: #151E3F;
 }
@@ -605,7 +589,6 @@ h1:after {
 .contact_box {
     display: flex;
     width: 100%;
-    /* height: 180vh; */
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 15vh;
@@ -848,7 +831,6 @@ textarea:focus-visible {
 {
     display: block;
     width: 100%;
-    /* height: 80vh; */
     margin-top: 70px;
 }
 
@@ -915,7 +897,6 @@ a:-webkit-any-link {
         line-height: 100px;
     }
     .infos {
-        /* height: 160vh; */
         padding-left: 15%;
         padding-right: 15%;
     }
@@ -923,7 +904,6 @@ a:-webkit-any-link {
         font-size: 1.9em;
         letter-spacing: 0.02em;
         line-height: 1.2em;
-        /* height: 30vh; */
     }
     .presentation a {
         font-size: 0.75em;
@@ -954,7 +934,6 @@ a:-webkit-any-link {
     .projects {
         padding-left: 10%;
         padding-right: 10%;
-        /* height: 140vh; */
     }
     .projects span {
         font-size: 1.9em;
@@ -962,10 +941,8 @@ a:-webkit-any-link {
     }
     .all_projects {
         flex-direction: row;
-        /* height: 60vh; */
         flex-wrap: wrap;
         justify-content: space-evenly;
-        /* padding-top: 10vh; */
     }
     .box{
         width: 250px;
@@ -1091,6 +1068,13 @@ a:-webkit-any-link {
         height: 50px;
         left: 48vw;
     }
+    .apparition #scrollElementLeft, .apparition #scrollElementRight {
+        opacity: 1;
+    }
+    .invisible #scrollElementLeft, .invisible #scrollElementRight {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+    }
     .left_contacts {
         display: block;
         position: fixed;
@@ -1100,7 +1084,7 @@ a:-webkit-any-link {
         right: auto;
         z-index: 1000;
         opacity: 1;
-        transition: 1.5s cubic-bezier(0.5, 0, 0, 1);
+        transition: all 300ms ease-in-out;
         height: unset;
     }
     .left_contacts ul, .side_mail {
@@ -1136,7 +1120,7 @@ a:-webkit-any-link {
         left: auto;
         z-index: 1000;
         opacity: 1;
-        transition: 1.5s cubic-bezier(0.5, 0, 0, 1);
+        transition: all 300ms ease-in-out;
         height: unset;
     }
     .right_contacts .side_mail a {
@@ -1178,8 +1162,6 @@ a:-webkit-any-link {
         height: 60vh;
     }
     .submit-button:hover {
-        /* border: 2px solid rgb(88, 222, 255);
-        color: rgb(88, 222, 255); */
         background: linear-gradient(to right bottom, #0f4996, rgb(20, 141, 189));
     }
     .reseaux {
