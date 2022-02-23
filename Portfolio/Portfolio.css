@@ -1080,7 +1080,7 @@ a:-webkit-any-link {
     .nothing #scrollElementLeft, .nothing #scrollElementRight {
         transform: translate3d(0, 100%, 0);
         opacity: 0;
-        height: unset;
+        height: 0;
     }
     .apparition #scrollElementLeft, .apparition #scrollElementRight {
         opacity: 1;
