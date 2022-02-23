@@ -356,6 +356,11 @@ h1:after {
     height: 0;
 }
 
+.nothing #scrollElementLeft, .nothing #scrollElementRight {
+    opacity: 0;
+    height: 0;
+}
+
 .invisible #scrollElementLeft, .invisible #scrollElementRight {
     opacity: 0;
     height: 0;
@@ -1072,8 +1077,14 @@ a:-webkit-any-link {
         height: 50px;
         left: 48vw;
     }
+    .nothing #scrollElementLeft, .nothing #scrollElementRight {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+        height: unset;
+    }
     .apparition #scrollElementLeft, .apparition #scrollElementRight {
         opacity: 1;
+        height: unset;
     }
     .invisible #scrollElementLeft, .invisible #scrollElementRight {
         transform: translate3d(0, 100%, 0);
