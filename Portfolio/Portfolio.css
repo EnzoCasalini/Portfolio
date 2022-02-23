@@ -201,7 +201,7 @@ body {
     width: 100%;
     height: 100vh;
     display: block;
-    background-image: url("./IMG/IMG2.JPG");
+    background-image: url("./IMG/IMG2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -356,6 +356,10 @@ h1:after {
     height: 0;
 }
 
+.invisible #scrollElementLeft, .invisible #scrollElementRight {
+    opacity: 0;
+    height: 0;
+}
 
 .infos {
     display: flex;
@@ -1074,6 +1078,7 @@ a:-webkit-any-link {
     .invisible #scrollElementLeft, .invisible #scrollElementRight {
         transform: translate3d(0, 100%, 0);
         opacity: 0;
+        height: unset;
     }
     .left_contacts {
         display: block;
